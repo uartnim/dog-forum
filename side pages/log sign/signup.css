@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* style cho tất cả các thẻ */
+* {
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+    font-family: "Poppins" , sans-serif;
+  }
+ 
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+  }
+/* Form */
+
+.forms{
+    box-shadow: rgba(165, 165, 165, 0.24) 0px 3px 8px;  
+  }
+  
+  .form-content {
+    padding: 100px;
+  }
+.form-content .signup-form{
+    width: calc(100% / 2 - 25px);
+  }
+
+.forms .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forms .form-content .input-boxes{
+  margin-top: 30px;
+}
+.forms .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.form-content .input-box i{
+  position: absolute;
+  color: #4C5775;
+  font-size: 17px;
+}
+.forms .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .text a{
+  text-decoration: none;
+}
+.forms .form-content .text a:hover{
+  text-decoration: underline;
+}
+.forms .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+.forms .form-content .button input{
+  color: #fff;
+  background: #4C5775;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.forms .form-content .button input:hover{
+    background: #d8cdcd;
+    color: #303443;
+}
+
+
+.forms .form-content label{
+  color: #4C5775;
+  cursor: pointer;
+}
+.forms .form-content label:hover{
+  text-decoration: underline;
+}
+
+.forms .form-content .sign-up-text{
+  text-align: center;
+  margin-top: 25px;
+}
+
+
+
+

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Noto+Serif+Old+Uyghur&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10px;
+    background-color: #808080;
+    z-index: 1;
+}
+
+.logo {
+    cursor: pointer;
+    padding-left: 150px;
+}
+
+.nav-links {
+    list-style: none;
+
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    font-family: 'Noto Serif Old Uyghur', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: #f5f5f1 !important;
+}
+
+.nav-links li a {
+    color: #f5f5f1 !important;
+
+}
+
+.nav-links li button {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+
+    text-decoration: none;
+}
+
+
+.sub_nav i {
+    padding-left: 30px;
+    cursor: pointer;
+    color: #181817 !important;
+
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+
+#infor_temperature {
+    width: 40px;
+    height: 40px;
+}
+
+#infor_temperature i {
+    font-size: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+
+#show_temp {
+    width: 100px;
+    height: 200px;
+    display: none;
+
+    /* background-color: aqua; */
+    /* position: absolute; */
+    background-image: url(./images/sunny.gif);
+
+}
+
+#infor_temperature i:hover~#show_temp {
+    display: block;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-size: 20px;
+
+}
+
+
+/* input user */
+.cont{
+    margin-top: 150px;
+    margin-left: 480px;
+
+}
+.infor {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+#username {
+    width: 200px;
+    margin-right: 30px;
+}
+
+#posttiltle {
+    width: 200px;
+}
+
+
+#posttext {
+    
+    width: 440px;
+    height: 200px;
+}
+
+.postupbtn {
+    padding: 13px;
+    background-color: #E99D0F;
+    width: 80px;
+    margin-top: 30px;
+}
+
+.postupbtn:hover {
+    color: #E99D0F;
+    background-color: white;
+    font-size: 17px;
+    text-transform: capitalize;
+}
