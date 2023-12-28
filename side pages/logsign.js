@@ -1,8 +1,4 @@
 
-let userNameMain = document.querySelector(".transfer_username");
-userNameMain.innerText =localStorage.getItem("username_login");
-console.log(localStorage.getItem("username_login"));
-
 let temperature = document.getElementById("temperature");
 let imgTemp = document.getElementById("show_temp");
 let img = document.createElement("img");
@@ -47,17 +43,17 @@ fetch(
                     imgTemp.style.backgroundImage = "url('./images/cloudy.gif')";
                     imgTemp.style.backgroundRepeat = "no-repeat";
                     imgTemp.style.zIndex = "1";
-
-
-
+                    
+                    
+                    
 
                 } else if (weather_code >= 77 && weather_code <= 99) {
                     imgTemp.style.backgroundImage = "url('./images/rainy.gif')";
                     imgTemp.style.backgroundRepeat = "no-repeat";
                     imgTemp.style.zIndex = "1";
-
+                    
                 }
-
+                
                 temperature.innerText = data_weather.current_weather.temperature;
                 console.log(data_weather.current_weather.temperature);
 
@@ -66,7 +62,7 @@ fetch(
 
 
 
-
+    
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
 import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
@@ -110,16 +106,16 @@ register_btn.addEventListener("click", function () {
     let password = password_register.value;
 
     createUserWithEmailAndPassword(auth, username, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            set(ref(database, "user/" + user.uid), {
+    .then((userCredential) => {
+        const user = userCredential.user;
+        set(ref(database, "user/" + user.uid), {
                 username: username,
                 password: password,
             })
 
             localStorage.setItem("currentUser",username_register.value);
             window.location.href="./login.html";
-
+            
             alert("Create an account successful");
 
         }).catch((err) => {
@@ -128,7 +124,7 @@ register_btn.addEventListener("click", function () {
 
             alert(erroMess);
         })
-
+        
 });
 
 
@@ -136,8 +132,8 @@ register_btn.addEventListener("click", function () {
 login_btn.addEventListener("click", function () {
     let username = username_login.value;
     let password = password_login.value;
-
-
+    
+    
     signInWithEmailAndPassword(auth, username, password)
 
         .then((userCredential) => {
@@ -146,21 +142,26 @@ login_btn.addEventListener("click", function () {
             update(ref(database, "user/" + user.uid), {
                 lastLogin: date
             })
-
+            
             localStorage.setItem("username_login", username);
 
             alert("Login successful");
             window.location.href="./index.html";
+            
 
-
-            })
+        })
         .catch((err) => {
             const errorCode = err.code;
             const erroMess = err.message;
-
+            
             alert(erroMess);
         })
-
+        
 })
 
 
+
+
+let userNameMain = document.querySelector(".transfer_username");
+userNameMain.innerText =localStorage.getItem("username_login");
+console.log(localStorage.getItem("username_login"));
