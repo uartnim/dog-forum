@@ -80,9 +80,9 @@ login_btn.addEventListener("click", function () {
 
             localStorage.setItem("username_login", username);
 
+            alert("Login successful");
             window.location.href="./index.html";
 
-                alert("Login successful");
 
             })
         .catch((err) => {
@@ -93,7 +93,3 @@ login_btn.addEventListener("click", function () {
         })
 
 })
-
-
-
-//

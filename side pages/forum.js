@@ -91,7 +91,7 @@ postBtn.addEventListener('click', (e) => {
 
     }
 
-    //   window.location.href="./blog.html";
+      window.location.href="./blog.html";
 }
 )
 
