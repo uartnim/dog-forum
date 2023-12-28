@@ -49,7 +49,10 @@ register_btn.addEventListener("click", function () {
             })
 
             localStorage.setItem("currentUser",username_register.value);
+            window.location.href="./login.html";
+
             alert("Create an account successful");
+
         }).catch((err) => {
             const errorCode = err.code;
             const erroMess = err.message;
@@ -74,6 +77,11 @@ login_btn.addEventListener("click", function () {
             update(ref(database, "user/" + user.uid), {
                 lastLogin: date
             })
+
+            localStorage.setItem("username_login", username);
+
+            window.location.href="./index.html";
+
                 alert("Login successful");
 
             })

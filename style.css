@@ -57,6 +57,47 @@ button{
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
+.sub_nav i{
+  padding-left: 30px;
+  cursor: pointer;
+  color: #181817 !important;
+
+}
+
+
+
+#infor_temperature{
+  width: 40px;
+  height: 40px;
+}
+
+#infor_temperature i{
+  font-size: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+
+#show_temp{
+  width: 100px;
+  height: 200px;
+  display: none;
+
+  /* background-color: aqua; */
+  /* position: absolute; */
+  background-image: url(./images/sunny.gif); 
+  
+}
+
+#infor_temperature i:hover ~  #show_temp{
+  display: block;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 20px;
+
+}
+
 
 
 /* Body */

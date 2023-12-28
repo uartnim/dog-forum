@@ -10,49 +10,53 @@
 
 
 
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 30px 10px;
-  background-color: #808080;
-  z-index: 1;
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #808080;
+}
+.logo{
+    cursor: pointer;
+}
+.nav-links{
+    list-style: none;
+    
 }
 
-.logo {
-  cursor: pointer;
-  padding-left: 150px;
-}
-
-.nav-links {
-  list-style: none;
-
-}
-
-.nav-links li {
-  display: inline-block;
-  padding: 0 20px;
-  font-family: 'Noto Serif Old Uyghur', serif;
-  font-weight: 500;
-  font-size: 20px;
-  text-decoration: none;
-  color: #f5f5f1 !important;
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+    font-family: 'Noto Serif Old Uyghur', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: #f5f5f1 !important;
 }
 
 .nav-links li a {
   color: #f5f5f1 !important;
-
+  
 }
 
-.nav-links li button {
-  transition: all 0.3s ease 0s;
+.nav-links li button{
+    transition: all 0.3s ease 0s;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover{
 
-  text-decoration: none;
+    text-decoration: none;
 }
 
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
 
 .sub_nav i{
   padding-left: 30px;
@@ -61,15 +65,6 @@ header {
 
 }
 
-button {
-  padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  
-}
 
 
 #infor_temperature{
@@ -89,11 +84,13 @@ button {
   height: 200px;
   display: none;
 
+
   /* background-color: aqua; */
   /* position: absolute; */
   background-image: url(./images/sunny.gif); 
   
 }
+
 
 #infor_temperature i:hover ~  #show_temp{
   display: block;
@@ -101,8 +98,9 @@ button {
   justify-content: center;
   padding-top: 50px;
   font-size: 20px;
-
+  z-index: 2;
 }
+
 
 /* Body */
 #body {
@@ -113,6 +111,7 @@ button {
 .slideshow{
   margin-top: 2px;
   margin-left: -100px;
+  z-index: 1;
 }
 
 .slideshow button {
