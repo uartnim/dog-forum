@@ -1,3 +1,8 @@
+let userNameMain = document.querySelector(".transfer_username");
+userNameMain.innerText =localStorage.getItem("username_login");
+console.log(localStorage.getItem("username_login"));
+
+
 let temperature = document.getElementById("temperature");
 let imgTemp = document.getElementById("show_temp");
 let img = document.createElement("img");
@@ -94,5 +99,3 @@ postBtn.addEventListener('click', (e) => {
       window.location.href="./blog.html";
 }
 )
-
-

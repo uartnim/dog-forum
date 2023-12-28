@@ -55,23 +55,23 @@ header {
 }
 
 
-.sub_nav i{
-    padding-left: 30px;
-    cursor: pointer;
-    color: #181817 !important;
+
+.sub_nav p{
+  text-align: center
 
 }
 
-button {
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    
-}
+button{
+  padding: 9px 25px;
+  /* background-color: rgba(0,136,169,1); */
+  border:none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #24252A;
+  font-family: 'Noto Serif Old Uyghur', serif;
 
+}
 
 #infor_temperature{
     width: 40px;

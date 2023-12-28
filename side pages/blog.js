@@ -1,3 +1,6 @@
+let userNameMain = document.querySelector(".transfer_username");
+userNameMain.innerText =localStorage.getItem("username_login");
+console.log(localStorage.getItem("username_login"));
 
 let temperature = document.getElementById("temperature");
 let imgTemp = document.getElementById("show_temp");
@@ -94,6 +97,5 @@ postName.innerText = JSON.parse(localStorage.getItem("new_post")).newPostTitle;
 post.innerText = JSON.parse(localStorage.getItem("new_post")).newPostExcert;
 
 console.log(JSON.parse(localStorage.getItem("new_post")).newPostUser)
-
 
 

@@ -11,15 +11,109 @@
   }
  
 
-  body{
+  
+  header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 100px;
-  }
-/* Form */
+    padding: 30px 10%;
+    background-color: #808080;
+}
+.logo{
+    cursor: pointer;
+}
+.nav-links{
+  list-style: none;
+  
+}
 
-.forms{
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+    font-family: 'Noto Serif Old Uyghur', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: #f5f5f1 !important;
+}
+
+.nav-links li a {
+  color: #f5f5f1 !important;
+  text-decoration: none;
+
+  
+}
+
+.nav-links li button{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+
+    text-decoration: none;
+}
+
+button{
+    padding: 9px 25px;
+    /* background-color: rgba(0,136,169,1); */
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #24252A;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Noto Serif Old Uyghur', serif;
+}
+
+.sub_nav p{
+  text-align: center
+
+}
+
+
+
+#infor_temperature{
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+}
+
+#infor_temperature i{
+  font-size: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+
+#show_temp{
+  width: 100px;
+  height: 200px;
+  display: none;
+
+  /* background-color: aqua; */
+  /* position: absolute; */
+  background-image: url(./images/sunny.gif); 
+  
+}
+
+#infor_temperature i:hover ~  #show_temp{
+  display: block;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 20px;
+
+}
+
+ 
+  /* Form */
+  
+  .forms{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
     box-shadow: rgba(165, 165, 165, 0.24) 0px 3px 8px;  
   }
   

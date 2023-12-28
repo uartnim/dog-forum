@@ -50,18 +50,21 @@ header{
 }
 
 button{
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
-    border:none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+  padding: 9px 25px;
+  /* background-color: rgba(0,136,169,1); */
+  border:none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #24252A;
+  font-family: 'Noto Serif Old Uyghur', serif;
+
 }
 
-.sub_nav i{
-  padding-left: 30px;
-  cursor: pointer;
-  color: #181817 !important;
+
+
+.sub_nav p{
+  text-align: center
 
 }
 
@@ -70,6 +73,7 @@ button{
 #infor_temperature{
   width: 40px;
   height: 40px;
+  z-index: 3;
 }
 
 #infor_temperature i{
@@ -120,7 +124,7 @@ button{
 .mySlides{
   width: 1354px;
   height: 722px;
- 
+ z-index: 1;
 }
 
 /* Intro */
