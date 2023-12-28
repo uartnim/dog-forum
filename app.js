@@ -78,6 +78,6 @@ fetch(
     });
 
     let userNameMain = document.querySelector(".transfer_username");
-userNameMain.innerText =localStorage.getItem("currentUser");
-console.log(localStorage.getItem("currentUser"));
+userNameMain.innerText =localStorage.getItem("username_login");
+console.log(localStorage.getItem("username_login"));
 
