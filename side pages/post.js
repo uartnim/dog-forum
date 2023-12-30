@@ -1,7 +1,3 @@
-let userNameMain = document.querySelector(".transfer_username");
-userNameMain.innerText =localStorage.getItem("username_login");
-console.log(localStorage.getItem("username_login"));
-
 
 let temperature = document.getElementById("temperature");
 let imgTemp = document.getElementById("show_temp");
@@ -12,7 +8,7 @@ img.src = "";
 
 fetch(
     `https://geocoding-api.open-meteo.com/v1/search?name=hanoi`
-)
+    )
     .then(function (response) {
         return response.json();
     })
@@ -23,10 +19,10 @@ fetch(
 
         let latitude = data.results[0].latitude;
         let longitude = data.results[0].longitude;
-
+        
         fetch(
             `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
-        )
+            )
             .then(function (response) {
                 return response.json();
             })
@@ -35,112 +31,112 @@ fetch(
                 console.log(data_weather.current_weather.weathercode);
                 let weather_code = data_weather.current_weather.weathercode;
                 console.log(weather_code);
-
-
+                
+                
                 if (weather_code >= 0 && weather_code <= 3) {
                     imgTemp.style.backgroundImage = "url('./images/sunny.gif')";
                     imgTemp.style.backgroundRepeat = "no-repeat";
                     imgTemp.style.zIndex = "1";
-
-
+                    
+                    
                 } else if (weather_code >= 45 && weather_code <= 77) {
                     imgTemp.style.backgroundImage = "url('./images/cloudy.gif')";
                     imgTemp.style.backgroundRepeat = "no-repeat";
                     imgTemp.style.zIndex = "1";
-
-
-
-
+                    
+                    
+                    
+                    
                 } else if (weather_code >= 77 && weather_code <= 99) {
                     imgTemp.style.backgroundImage = "url('./images/rainy.gif')";
                     imgTemp.style.backgroundRepeat = "no-repeat";
                     imgTemp.style.zIndex = "1";
-
+                    
                 }
 
                 temperature.innerText = data_weather.current_weather.temperature;
                 console.log(data_weather.current_weather.temperature);
-
+                
             });
     });
 
+    
 
 
-
-let post = document.querySelector(".postcmt");
+ let post = document.querySelector(".postcmt");
 let post_container = document.querySelector(".post_container");
 let name = document.getElementById("name");
 let cmt_text = document.getElementById("cmt_text");
 
 let getListCommentFromLocalStorage = JSON.parse(
     localStorage.getItem("List comment")
-);
-
-if (getListCommentFromLocalStorage == null) {
-    localStorage.setItem("List comment", JSON.stringify([]));
-    location.reload();
-} else {
-    post.addEventListener("click", () => {
-        if (name.value == "" || cmt_text.value == "") {
-            alert("Write more...");
-        } else {
-            getListCommentFromLocalStorage.push({
-                name: name.value,
-                my_comment: cmt_text.value,
-                currentDate: "7/2/2024",
-
-            });
-
-            console.log(getListCommentFromLocalStorage);
-
-            localStorage.setItem(
-                "List comment",
+    );
+    
+    if (getListCommentFromLocalStorage == null) {
+        localStorage.setItem("List comment", JSON.stringify([]));
+        location.reload();
+    } else {
+        post.addEventListener("click", () => {
+            if (name.value == "" || cmt_text.value == "") {
+                alert("Write more...");
+            } else {
+                getListCommentFromLocalStorage.push({
+                    name: name.value,
+                    my_comment: cmt_text.value,
+                    currentDate: "7/2/2024",
+                    
+                });
+                
+                console.log(getListCommentFromLocalStorage);
+                
+                localStorage.setItem(
+                    "List comment",
                 JSON.stringify(getListCommentFromLocalStorage)
-            );
+                );
 
-            location.reload();
-            let CurrentDate = "7/2/2024";
+                location.reload();
+                let CurrentDate = "7/2/2024";
+                
 
-
-
-
-            let newDiv = document.createElement("div");
-            newDiv.className = "post";
-            newDiv.innerHTML = `
-            < <div class="logo_holder">
+                
+                
+                let newDiv = document.createElement("div");
+                newDiv.className = "post";
+                newDiv.innerHTML = `
+                < <div class="logo_holder">
             <img class="img" src="./images/dingo-x-gray-moon-blue.jpg" alt="" />
-        </div>
-
-        <div class="content">
+            </div>
+            
+            <div class="content">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                 repellat eveniet atque minus itaque. Ipsam voluptatem ipsum mollitia
                 adipisci quibusdam tempore cupiditate maxime aliquid facilis quasi
                 magni autem, eos aperiam?
             </p>
 
-        </div>
-   
+            </div>
+            
     <div class="infor_cmt">
-        <div class="infor">
+    <div class="infor">
             <b><span class="person_name">Huong </span></b>
             <span> Dec 22, 2023</span>
-        </div>
+            </div>
 
-        <div class="rep_cmt">
+            <div class="rep_cmt">
             <span>Reply</span>
-        </div>
-    </div>
-      `;
+            </div>
+            </div>
+            `;
             name.value = "";
             cmt_text.value = "";
             post_container.appendChild(newDiv);
-
+            
         }
     });
-
+    
     renderComment(getListCommentFromLocalStorage);
-
+    
     function renderComment(array_list_comment) {
         for (let i = 0; i < array_list_comment.length; i++) {
             let newDiv = document.createElement("div");
@@ -148,25 +144,25 @@ if (getListCommentFromLocalStorage == null) {
             newDiv.innerHTML = `
             <div style="display: flex; align-items: flex-start;">
             <div class="logo_holder">
-                <img class="img" src="./images/dingo-x-gray-moon-blue.jpg" alt="" />
+            <img class="img" src="./images/dingo-x-gray-moon-blue.jpg" alt="" />
             </div>
-      
+            
             <div class="content">
-                <p> ${array_list_comment[i].my_comment}
-                </p>
+            <p> ${array_list_comment[i].my_comment}
+            </p>
             </div>
             </div>
             <div class="infor_cmt">
-                <div class="infor">
-                    <b><span class="person_name">${array_list_comment[i].name}</span></b>
-                    <span> February 7, 2024</span>
-                </div>
-        
-                <div class="rep_cmt">
-                    <span>Reply</span>
-                </div>
+            <div class="infor">
+            <b><span class="person_name">${array_list_comment[i].name}</span></b>
+            <span> February 7, 2024</span>
             </div>
-      `;
+            
+            <div class="rep_cmt">
+            <span>Reply</span>
+            </div>
+            </div>
+            `;
             name.value = "";
             cmt_text.value = "";
             post_container.appendChild(newDiv);
@@ -196,3 +192,14 @@ console.log(JSON.parse(localStorage.getItem("current_page")).currentPostName
 
 
 
+let userNameMain = document.querySelector(".transfer_btn");
+userNameMain.innerText =localStorage.getItem("username_login");
+console.log(localStorage.getItem("username_login"));
+
+let logoutBtn = document.querySelector(".logout");
+// logout button click event listener
+logoutBtn.addEventListener("click", function (){
+    userNameMain.innerText = "Login/Signup";
+    localStorage.removeItem("username_login");
+    window.location.reload;
+})

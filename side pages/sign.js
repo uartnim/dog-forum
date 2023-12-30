@@ -1,4 +1,3 @@
-
 let temperature = document.getElementById("temperature");
 let imgTemp = document.getElementById("show_temp");
 let img = document.createElement("img");
@@ -92,13 +91,14 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
 
-let username_login = document.getElementById("username_input_login");
-let password_login = document.getElementById("password_input_login");
+
+
+
+
 let username_register = document.getElementById("username_input_register");
 let password_register = document.getElementById("password_input_register");
-let loginBtn = document.getElementById("login_btn");
 let registerBtn = document.getElementById("register_btn");
-console.log(loginBtn);
+// console.log(loginBtn);
 
 //register an account
  
@@ -114,10 +114,12 @@ registerBtn.addEventListener("click", function () {
                 password: password,
             })
 
-            // localStorage.setItem("currentUser",username_register.value);
-            window.location.href = "./login.html";
-
+            localStorage.setItem("currentUser",username_register.value);
             alert("Create an account successful");
+
+            setTimeout(function(){window.location.href="login.html"} , 5000);   
+            
+
 
         }).catch((err) => {
             const errorCode = err.code;
@@ -128,41 +130,6 @@ registerBtn.addEventListener("click", function () {
 
 });
 
-
-//login an exist account
-loginBtn.addEventListener("click", function () {
-    let username = username_login.value;
-    let password = password_login.value;
-
-
-    signInWithEmailAndPassword(auth, username, password)
-
-        .then((userCredential) => {
-            const user = userCredential.user;
-            let date = new Date();
-            update(ref(database, "user/" + user.uid), {
-                lastLogin: date
-            })
-
-            localStorage.setItem("username_login", username);
-
-            alert("Login successful");
-            window.location.href = "./index.html";
-
-
-        })
-        .catch((err) => {
-            const errorCode = err.code;
-            const erroMess = err.message;
-
-            alert(erroMess);
-        })
-
-})
-
-
-
-
-let userNameMain = document.querySelector(".transfer_username");
+let userNameMain = document.querySelector(".transfer_btn");
 userNameMain.innerText = localStorage.getItem("username_login");
 console.log(localStorage.getItem("username_login"));

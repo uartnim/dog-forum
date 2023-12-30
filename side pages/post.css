@@ -73,6 +73,34 @@ button{
 
 }
 
+
+.transfer_username{
+  width: 180px;
+  height: 20px;
+  margin: 0;
+  /* z-index: 3; */
+}
+
+.logout {
+  display: none;
+  width: 180px;
+  height: 30px;
+}
+
+
+
+.transfer_username:hover ~ .logout{
+  display: block;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+.logout:hover {
+  display: block;
+}
+
 #infor_temperature{
     width: 40px;
     height: 40px;

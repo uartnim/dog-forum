@@ -1,3 +1,18 @@
+let logoutBtn = document.querySelector(".logout");
+// logout button click event listener
+logoutBtn.addEventListener("click", function (){
+    userNameMain.innerText = "Login/Signup";
+    localStorage.removeItem("username_login");
+    window.location.reload;
+})
+
+
+
+let userNameMain = document.querySelector(".transfer_username");
+userNameMain.innerText = localStorage.getItem("username_login");
+console.log(localStorage.getItem("username_login"));
+
+
 
 let temperature = document.getElementById("temperature");
 let imgTemp = document.getElementById("show_temp");
@@ -94,40 +109,8 @@ const auth = getAuth();
 
 let username_login = document.getElementById("username_input_login");
 let password_login = document.getElementById("password_input_login");
-let username_register = document.getElementById("username_input_register");
-let password_register = document.getElementById("password_input_register");
+
 let loginBtn = document.getElementById("login_btn");
-let registerBtn = document.getElementById("register_btn");
-console.log(loginBtn);
-
-//register an account
- 
-registerBtn.addEventListener("click", function () {
-    let username = username_register.value;
-    let password = password_register.value;
-
-    createUserWithEmailAndPassword(auth, username, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            set(ref(database, "user/" + user.uid), {
-                username: username,
-                password: password,
-            })
-
-            // localStorage.setItem("currentUser",username_register.value);
-            window.location.href = "./login.html";
-
-            alert("Create an account successful");
-
-        }).catch((err) => {
-            const errorCode = err.code;
-            const erroMess = err.message;
-
-            alert(erroMess);
-        })
-
-});
-
 
 //login an exist account
 loginBtn.addEventListener("click", function () {
@@ -162,7 +145,3 @@ loginBtn.addEventListener("click", function () {
 
 
 
-
-let userNameMain = document.querySelector(".transfer_username");
-userNameMain.innerText = localStorage.getItem("username_login");
-console.log(localStorage.getItem("username_login"));
