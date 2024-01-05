@@ -181,8 +181,7 @@ post_name.innerText = JSON.parse(localStorage.getItem("current_page")).currentPo
 post_image.src = JSON.parse(localStorage.getItem("current_page")).currentPostImg;
 post_view.innerText = JSON.parse(localStorage.getItem("current_page")).currentPostViews;
 post_date.innerText = JSON.parse(localStorage.getItem("current_page")).currentPostDate;
-post_cmt.innerText = JSON.parse(localStorage.getItem("current_page")).currentPostCOmments;
-post_user.innerText = JSON.parse(localStorage.getItem("current_page")).currentPostUser;
+post_cmt.innerText = JSON.parse(localStorage.getItem("current_page")).currentPostComments;
 post_user.innerText = JSON.parse(localStorage.getItem("current_page")).currentPostUser;
 post_cont.innerText =  JSON.parse(localStorage.getItem("current_page")).currentPostExcert; 
 

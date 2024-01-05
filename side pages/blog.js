@@ -74,7 +74,7 @@ fetch(
     let postUser = document.querySelectorAll(".user-name");
     
     
-    for (let i = 0; i < btn.length; i++) {
+   for (let i = 0; i < btn.length; i++) {
         btn[i].addEventListener('click', (e) => {
             
             localStorage.setItem("current_page", JSON.stringify({

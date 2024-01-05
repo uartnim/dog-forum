@@ -175,3 +175,178 @@ button{
     font-size: 17px;
     text-transform: capitalize;
 }
+
+
+  
+ /* footer */
+ footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #525353;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 200px;
+  }
+  
+  footer .about {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  footer .about .noidung {
+    margin-right: 30px;
+  }
+  
+  footer .about .footer__logo {
+    width: 40%;
+  }
+  
+  footer .about .noidung .footer__logo {
+    position: relative;
+    color: #f0eded;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 32px;
+  }
+  
+  .about .noidung.footer__logo ::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgb(31, 4, 150);
+  }
+  
+  
+  
+  .social-icon {
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .social-icon li {
+    list-style: none;
+  }
+  
+  .social-icon li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #eedbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .social-icon li a:hover {
+    background: rgb(131, 108, 230);
+  }
+  
+  .social-icon .li .i {
+    color: #3d2626;
+    font-size: 10px;
+  }
+  
+  .link_about h2 {
+    position: relative;
+    color: #faf5f5;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .link_about h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgb(72, 49, 177);
+  }
+  
+  .link_about {
+    position: relative;
+    width: 25%;
+  }
+  
+  .link_about ul li {
+    list-style: none;
+  }
+  
+  .link_about ul li a {
+    color: #ebe9e9;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 18px;
+  }
+  
+  .link_about ul li a:hover {
+    color: rgb(131, 108, 230);
+  }
+  
+  .about_contact h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .about_contact h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgb(72, 49, 177);
+  
+  }
+  
+  .about_contact {
+    width: calc(35%-60px);
+    margin-right: 0;
+  }
+  
+  .about_contact .infor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .about_contact .infor li {
+    display: flex;
+    margin-bottom: 16px;
+  }
+  
+  .about_contact .infor li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .about_contact .infor li span {
+    color: #eee4e4;
+  }
+  
+  .about_contact .infor li a {
+    color: #f0e3e3;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .about_contact .infor li p {
+    display: inline-block;
+  }
+    
